@@ -1,0 +1,22 @@
+# LaTeX build directory
+build/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.toc
+*.out
+*.bbl
+*.blg
+
+# MiKTeX temporary files
+*.fmt
+*.tfm
+
+# OS temporary files
+.DS_Store
+Thumbs.db

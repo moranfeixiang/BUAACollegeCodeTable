@@ -1,0 +1,87 @@
+%!LW recipe=latexmk-xelatex-move-pdf
+\documentclass[UTF8,zihao=-4]{ctexart}
+% 页面尺寸沿用原文件，四周保留 7 mm 页边距
+\usepackage[paperwidth=250mm,paperheight=245mm,margin=7mm]{geometry}
+% array 控制定宽列，multirow 用于书院/学院分组，graphicx 保留原依赖
+\usepackage{array,multirow,graphicx}
+% 字体配置：正文汉字使用仿宋_GB2312，数字和英文字母使用 Times New Roman，标题使用方正小标宋简体
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.2]{FangSong_GB2312}
+\setCJKfamilyfont{xiaobiaosong}{FZXiaoBiaoSong-B05S}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{2.5pt}
+\setlength{\arrayrulewidth}{0.45pt}
+\renewcommand{\arraystretch}{1.18}
+% 定宽列内统一水平、垂直居中
+\newcommand{\cell}[1]{\centering\arraybackslash #1}
+\begin{document}
+% center 环境保证标题和表格整体水平居中；页面高度接近满版，因此不再额外加入弹性分页留白
+\begin{center}
+% 标题按版心严格居中；标题汉字使用方正小标宋简体；日期使用零宽盒放在右上角，不参与标题的居中计算
+\noindent\makebox[\linewidth][c]{{\zihao{2}\CJKfamily{xiaobiaosong}北京航空航天大学 系号--学院/书院对照表}}\makebox[0pt][r]{{\zihao{4}(2026.7)}}\\[2mm]
+% 表格拆为八个基础列；普通学院行通过 multicolumn 合并，分组行直接使用基础列，避免嵌套表格导致横竖线缺失
+\begin{tabular}{|>{\cell}m{11mm}|>{\cell}m{13mm}|>{\cell}m{15mm}|>{\cell}m{68mm}|>{\cell}m{12mm}|>{\cell}m{15mm}|>{\cell}m{15mm}|>{\cell}m{70mm}|}
+\hline
+\bfseries 系号 & \multicolumn{3}{c|}{\bfseries 学院} & \bfseries 系号 & \multicolumn{3}{c|}{\bfseries 学院/书院} \\
+\hline
+01 & \multicolumn{3}{c|}{材料科学与工程学院} & 25 & \multicolumn{3}{c|}{国际学院} \\
+\hline
+02 & \multicolumn{3}{c|}{电子信息工程学院} & 26 & \multicolumn{3}{c|}{新媒体艺术与设计学院} \\
+\hline
+03 & \multicolumn{3}{c|}{自动化科学与电气工程学院} & 27 & \multicolumn{3}{c|}{化学学院} \\
+\hline
+04 & \multicolumn{3}{c|}{能源与动力工程学院} & 28 & \multicolumn{3}{c|}{马克思主义学院} \\
+\hline
+05 & \multicolumn{3}{c|}{航空科学与工程学院} & 29 & \multicolumn{3}{c|}{人文与社会科学高等研究院} \\
+\hline
+06 & \multicolumn{3}{c|}{计算机学院} & 30 & \multicolumn{3}{c|}{空间与地球科学学院} \\
+\hline
+07 & \multicolumn{3}{c|}{机械工程及自动化学院} & 31 & \multicolumn{3}{c|}{无人系统研究院} \\
+\hline
+08 & \multicolumn{3}{c|}{经济管理学院} & 32 & \multicolumn{3}{c|}{航空发动机研究院} \\
+\hline
+09 & \multicolumn{3}{c|}{数学科学学院} & 33 & \multicolumn{3}{c|}{体育部} \\
+\hline
+10 & \multicolumn{3}{c|}{生物与医学工程学院} & 36 & \multicolumn{3}{c|}{国际前沿交叉科学研究院} \\
+\hline
+% 37 系北航学院分为七个书院；仅在书院子列之间绘制横线，保留 37 与“北航学院”的纵向合并单元格
+11 & \multicolumn{3}{c|}{人文社会科学学院（公共管理学院）} & \multirow{7}{*}{37} & \multirow{7}{*}{\shortstack{北\\航\\学\\院}} & 71 & 传源书院（计算与智能科学类） \\
+\cline{1-4}\cline{7-8}
+12 & \multicolumn{3}{c|}{外国语学院} & & & 73 & 士谔书院（信息科学与技术类） \\
+\cline{1-4}\cline{7-8}
+13 & \multicolumn{3}{c|}{交通科学与工程学院} & & & 74 & 冯如书院（航空航天类） \\
+\cline{1-4}\cline{7-8}
+14 & \multicolumn{3}{c|}{可靠性与系统工程学院} & & & 75 & 士嘉书院（航空航天类） \\
+\cline{1-4}\cline{7-8}
+15 & \multicolumn{3}{c|}{宇航学院} & & & 76 & 守锷书院（航空航天类） \\
+\cline{1-4}\cline{7-8}
+16 & \multicolumn{3}{c|}{飞行学院} & & & 77 & 致真书院（理科试验班类） \\
+\cline{1-4}\cline{7-8}
+17 & \multicolumn{3}{c|}{仪器科学与光电工程学院} & & & 79 & 知行书院（社会科学试验班） \\
+\hline
+18 & \multicolumn{3}{c|}{北京学院} & 38 & \multicolumn{3}{c|}{医工交叉创新研究院} \\
+\hline
+19 & \multicolumn{3}{c|}{物理学院} & 39 & \multicolumn{3}{c|}{网络空间安全学院} \\
+\hline
+20 & \multicolumn{3}{c|}{法学院} & 41 & \multicolumn{3}{c|}{集成电路科学与工程学院} \\
+\hline
+21 & \multicolumn{3}{c|}{软件学院} & 42 & \multicolumn{3}{c|}{人工智能学院（人工智能研究院）} \\
+\hline
+22 & \multicolumn{3}{c|}{继续教育学院} & 45 & \multicolumn{3}{c|}{医学科学与工程学院} \\
+\hline
+% 23 系沈元学院分为四个学院；右侧对应 54、57、60、61 系，横线从子系号列开始以保持左侧合并单元格完整
+\multirow{4}{*}{23} & \multirow{4}{*}{\shortstack{沈\\元\\学\\院}} & 231 & 高等理工学院 & 54 & \multicolumn{3}{c|}{大科学装置研究院/零磁科学中心} \\
+\cline{3-8}
+& & 232 & 未来空天技术学院 & 57 & \multicolumn{3}{c|}{杭州国际创新研究院} \\
+\cline{3-8}
+& & 233 & 国家卓越工程师学院 & 60 & \multicolumn{3}{c|}{中法航空学院} \\
+\cline{3-8}
+& & 234 & 量子科技学院 & 61 & \multicolumn{3}{c|}{中法未来科技学院} \\
+\hline
+24 & \multicolumn{3}{c|}{中法工程师学院/国际通用工程学院} & 62 & \multicolumn{3}{c|}{中西智能学院} \\
+\hline
+\end{tabular}
+\end{center}
+\end{document}
