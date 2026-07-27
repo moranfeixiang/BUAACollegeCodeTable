@@ -1,28 +1,122 @@
 # BUAA College Code Table
 
-北京航空航天大学系号—学院/书院对照表。
+北京航空航天大学系号—学院/书院对照表  
+北航杭州国新院平台缩写参考表
+
+本项目使用 **XeLaTeX** 编译，适用于中文 LaTeX 文档排版。
+
+---
+
+## 项目简介
+
+本项目用于整理和生成：
+
+- 北京航空航天大学系号—学院/书院对照表；
+- 北京航空航天大学杭州国际创新研究院平台缩写参考表；
+- 不同社群/组织使用的定制化水印版本。
+
+表格采用 LaTeX 制作，支持高清 PDF 输出以及 PNG 图片导出。
+
+---
 
 ## 文件说明
 
-- `BUAATable.tex`：LaTeX 源文件
-- `BUAATable.pdf`：当前版本对照表
-- `BUAATable_ACG.pdf`：ACG 修改版本
-- `BUAATable_Henan.pdf`：河南相关版本
-- `images/`：参考图片和导出图片
-- `.vscode/settings.json`：VS Code LaTeX Workshop 编译配置
+### LaTeX 源文件
+
+| 文件 | 说明 |
+|---|---|
+| `BUAATable.tex` | 北航系号—学院/书院对照表 LaTeX 源文件 |
+| `BUAAHTable.tex` | 杭州国新院平台缩写参考表 LaTeX 源文件 |
+
+---
+
+### 定制版本
+
+| 文件 | 说明 |
+|---|---|
+| `BUAATable_ACG` | 飞梦 ACG 联盟 QQ 群水印版本 |
+| `BUAATable_Henan` | 河南老乡群水印版本 |
+| `BUAATable_Game` | 新次元主机社水印版本 |
+| `BUAATable_MH` | 航专怪猎妙妙屋水印版本 |
+
+---
+
+### 目录说明
+
+```
+BUAACollegeCodeTable
+│
+├── *.tex             LaTeX 源文件
+├── pdf/              复制来的编译生成的 PDF 文件
+├── image/            导出的 PNG 图片及图片资源
+├── build/            LaTeX 编译临时文件和 pdf
+├── .vscode/
+│   └── settings.json  VSCode LaTeX Workshop 配置
+└── README.md
+```
+
+---
 
 ## 编译环境
 
-- Visual Studio Code
-- LaTeX Workshop
-- MiKTeX
-- XeLaTeX
-- latexmk
+推荐环境：
+
+- 操作系统：Windows 10 / Windows 11
+- LaTeX 发行版：MiKTeX
+- 编译引擎：XeLaTeX
+- 编辑器：Visual Studio Code
+- LaTeX 插件：LaTeX Workshop
+- 构建工具：latexmk
+
+---
+
+## 字体依赖
+
+项目使用以下字体：
+
+- Times New Roman
+- FangSong_GB2312
+- FZXiaoBiaoSong-B05S
+
+请提前安装对应字体，否则标题及正文显示效果可能存在差异。
+
+字体资源可以通过网络搜索或使用下方参考：
+
+https://github.com/DoveOutland/Common-Chinese-office-fonts-font-library-
+
+
+---
 
 ## 编译方法
 
-在 VS Code 中打开项目后按：
+在 VSCode 安装 LaTeX Workshop 后：
 
-```text
+1. 使用 VS Code 打开项目；
+2. 打开 `.tex` 文件；
+3. 执行：
+
+```
 Ctrl + Alt + B
-{ _ble_edit_exec_gexec__save_lastarg "$@"; } 4>&1 5>&2 &>/dev/null
+```
+
+默认调用 latexmk-xelatex 生成 PDF 文件。
+
+---
+
+
+## PDF 导出 PNG
+
+项目使用 MiKTeX 自带的 `pdftoppm` 工具进行 PDF 转图片：
+
+```bash
+pdftoppm -png -singlefile -r 300 BUAAHTable.pdf images/BUAAHTable
+```
+
+参数说明：
+
+| 参数 | 作用 |
+|---|---|
+| `-png` | 输出 PNG 格式 |
+| `-singlefile` | 单页输出，不添加页码 |
+| `-r 300` | 输出分辨率 300 DPI |
+
