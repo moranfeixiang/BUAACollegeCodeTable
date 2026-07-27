@@ -1,0 +1,75 @@
+%!LW recipe=latexmk-xelatex-move-pdf
+\documentclass[UTF8,zihao=-4]{ctexart}
+
+\usepackage[a4paper,margin=10mm]{geometry}
+\usepackage{array,fontspec}
+
+% 字体
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.2]{FangSong_GB2312}
+\newCJKfontfamily\titlefont{FZXiaoBiaoSong-B05S}
+
+% 页面与表格
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\arrayrulewidth}{0.45pt}
+\renewcommand{\arraystretch}{1.32}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+\begin{center}
+
+% 标题居中，日期靠右
+\makebox[\linewidth][c]{%
+  {\zihao{2}\titlefont 北航杭州国新院平台缩写参考表}}%
+\makebox[0pt][r]{{\zihao{4}(2026.7)}}\\[2.5mm]
+
+\begin{tabular}{|C{155mm}|C{25mm}|}
+\hline
+\textbf{平台} & \textbf{缩写} \\
+\hline
+自旋芯片与技术全国重点实验室/微纳科学与分析测试协同创新中心 & 自旋 \\
+\hline
+仿生界面材料科学全国重点实验室/仿生科学与技术科创中心 & 仿生 \\
+\hline
+物理化学科教平台 & 物理化学 \\
+\hline
+数据科学与智能计算科教平台 & 数智 \\
+\hline
+工程师通用技术科教平台 & 工程师 \\
+\hline
+低空运载系统科教平台 & 低空 \\
+\hline
+智能测试与健康管理产教协同创新中心 & 智能测试 \\
+\hline
+智慧民航科创中心 & 民航 \\
+\hline
+医工交叉科创中心/高端医疗装备与器械国际医学攻关产教融合平台 & 医工 \\
+\hline
+大飞机科创中心/大飞机研究院（杭州） & 大飞机 \\
+\hline
+人工智能科创中心 & 人工智能 \\
+\hline
+国际大赫兹科创中心 & 大赫兹 \\
+\hline
+国际仿真技术科创中心 & 仿真 \\
+\hline
+空间环境与行星科学国际研究中心 & 空间 \\
+\hline
+碳中和国际研究中心 & 碳中和 \\
+\hline
+绿色光子国际研究中心 & 绿色光子 \\
+\hline
+数学交叉国际研究中心 & 数学交叉 \\
+\hline
+智能系统与人形机器人国际研究中心 & 机器人 \\
+\hline
+复杂科学国际研究中心 & 复杂科学 \\
+\hline
+联合国附属空间科技教育亚太区域中心（中国） & 联合国 \\
+\hline
+\end{tabular}
+
+\end{center}
+\end{document}
