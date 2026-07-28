@@ -13,7 +13,7 @@
 
 - 北京航空航天大学系号—学院/书院对照表；
 - 北京航空航天大学杭州国际创新研究院平台缩写参考表；
-- 不同社群/组织使用的定制化水印版本。
+- 北航老乡群的加入方式。
 
 表格采用 LaTeX 制作，支持高清 PDF 输出以及 PNG 图片导出。
 
@@ -27,17 +27,7 @@
 |---|---|
 | `BUAATable.tex` | 北航系号—学院/书院对照表 LaTeX 源文件 |
 | `BUAAHTable.tex` | 杭州国新院平台缩写参考表 LaTeX 源文件 |
-
----
-
-### 定制版本
-
-| 文件 | 说明 |
-|---|---|
-| `BUAATable_ACG` | 飞梦 ACG 联盟 QQ 群水印版本 |
-| `BUAATable_Henan` | 河南老乡群水印版本 |
-| `BUAATable_Game` | 新次元主机社水印版本 |
-| `BUAATable_MH` | 航专怪猎妙妙屋水印版本 |
+| `BUAAHTable.tex` | 北航老乡群的QQ群信息表 LaTeX 源文件 |
 
 ---
 
@@ -102,7 +92,6 @@ Ctrl + Alt + B
 默认调用 latexmk-xelatex 生成 PDF 文件。
 
 ---
-
 
 ## PDF 导出 PNG
 
