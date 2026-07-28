@@ -1,0 +1,116 @@
+%!LW recipe=latexmk-xelatex
+\documentclass[UTF8,fontset=none,zihao=-4]{ctexart}
+
+\usepackage[paperwidth=210mm,paperheight=297mm,margin=7mm]{geometry}
+\usepackage{array,fontspec,hyperref}
+
+% 字体
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.2]{FangSong_GB2312}
+\newCJKfontfamily\titlefont{FZXiaoBiaoSong-B05S}
+
+
+% 页面与表格设置
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\arrayrulewidth}{0.45pt}
+\renewcommand{\arraystretch}{1.15}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% 链接样式
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=black
+}
+\urlstyle{same}
+\newcommand{\grouplink}[1]{\href{#1}{\nolinkurl{#1}}}
+
+\begin{document}
+\begin{center}
+
+% 标题居中，日期靠右，与参考文件一致
+\makebox[\linewidth][c]{%
+  {\zihao{2}\titlefont 北航老乡群信息}}%
+\makebox[0pt][r]{{\zihao{4}(2026.7)}}\\[2.5mm]
+
+% 使用普通 tabular，确保整张表格不分页
+{
+\begin{tabular}{|C{38mm}|C{36mm}|C{85mm}|C{22mm}|}
+\hline
+\textbf{地区} & \textbf{群号} & \textbf{加群链接} & \textbf{备注} \\
+\hline
+北京市 & & & \\
+\hline
+天津市 & 微信群 & & \\
+\hline
+上海市 & & & \\
+\hline
+重庆市 & 1063871493 & \grouplink{https://qm.qq.com/q/uE72WJdrEY} & 川渝同群 \\
+\hline
+河南省 & 252961227 & \grouplink{https://qm.qq.com/q/BBA9k0eHOE} & \\
+\hline
+河北省 & 1078374204 & \grouplink{https://qm.qq.com/q/yCuqP7g0rC} & \\
+\hline
+山东省 & 646750578 & \grouplink{https://qm.qq.com/q/2g7rdolzXi} & \\
+\hline
+山西省 & 875565289 & \grouplink{https://qm.qq.com/q/cPNhFvDHj} & \\
+\hline
+黑龙江省 & 51606117 & \grouplink{https://qm.qq.com/q/utn3X29344} & \\
+\hline
+吉林省 & 618829938 & &  \\
+\hline
+辽宁省 & 123753496 & \grouplink{https://qm.qq.com/q/OGNdo1pA8W} & \\
+\hline
+湖南省 & & & \\
+\hline
+湖北省 & 272299837 & \grouplink{https://qm.qq.com/q/mwF3RX1vLq} & \\
+\hline
+江苏省 & 117299705 & \grouplink{https://qm.qq.com/q/HsK1rtjMsy} & \\
+\hline
+安徽省 & 705951366 & \grouplink{https://qm.qq.com/q/yOngco67n4} & \\
+\hline
+浙江省 & &  & \\
+\hline
+江西省 & &  & \\
+\hline
+福建省 & &  & \\
+\hline
+广东省 & 36335934 & &  \\
+\hline
+云南省 & 788259626 & \grouplink{https://qm.qq.com/q/Vjeesiloc2} & \\
+\hline
+四川省 & 1063871493 & \grouplink{https://qm.qq.com/q/uE72WJdrEY} & 川渝同群 \\
+\hline
+甘肃省 & 623455375 & \grouplink{https://qm.qq.com/q/IfdBQ8QFZQ} & \\
+\hline
+陕西省 & 765163058 & \grouplink{https://qm.qq.com/q/3vyss6ny2A} & \\
+\hline
+贵州省 & & & \\
+\hline
+青海省 & 1090392713 & \grouplink{https://qm.qq.com/q/bguPxxYRSE} & 2026新建\\
+\hline
+海南省 & & & \\
+\hline
+台湾省 & & & \\
+\hline
+内蒙古自治区 & & & \\
+\hline
+广西壮族自治区 & & & \\
+\hline
+西藏自治区 & & & \\
+\hline
+宁夏回族自治区 & & & \\
+\hline
+新疆维吾尔自治区 & 微信群 & 可联系 QQ 2230235600 邀请进群 & \\
+\hline
+香港特别行政区 & & & \\
+\hline
+澳门特别行政区 & & & \\
+\hline
+\end{tabular}
+}
+
+\end{center}
+\end{document}
