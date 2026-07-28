@@ -92,7 +92,7 @@ Ctrl + Alt + B
 项目使用 MiKTeX 自带的 `pdftoppm` 工具进行 PDF 转图片：
 
 ```bash
-pdftoppm -png -singlefile -r 300 ./build/BUAA_CollegeCode.pdf ./image/BUAA_CollegeCode
+pdftoppm -png -singlefile -r 300 ./build/BUAA_Laoxiang.pdf ./image/BUAA_Laoxiang
 ```
 
 参数说明：
