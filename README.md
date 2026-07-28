@@ -19,16 +19,16 @@
 
 | 文件 | 说明 |
 |---|---|
-| `BUAATable.tex` | 北航系号—学院/书院对照表 LaTeX 源文件 |
-| `BUAAHTable.tex` | 杭州国新院平台缩写参考表 LaTeX 源文件 |
-| `BUAAHTable.tex` | 北航老乡群的QQ群信息表 LaTeX 源文件 |
+| `BUAA_CollegeCode.tex` | 北航系号—学院/书院对照表 LaTeX 源文件 |
+| `BUAA_Hangzhou.tex` | 杭州国新院平台缩写参考表 LaTeX 源文件 |
+| `BUAA_Laoxiang.tex` | 北航老乡群的QQ群信息表 LaTeX 源文件 |
 
 ---
 
 ### 目录说明
 
 ```
-BUAACollegeCodeTable
+BUAATable
 │
 ├── *.tex             LaTeX 源文件
 ├── pdf/              复制来的编译生成的 PDF 文件
@@ -92,7 +92,7 @@ Ctrl + Alt + B
 项目使用 MiKTeX 自带的 `pdftoppm` 工具进行 PDF 转图片：
 
 ```bash
-pdftoppm -png -singlefile -r 300 BUAAHTable.pdf images/BUAAHTable
+pdftoppm -png -singlefile -r 300 ./build/BUAA_CollegeCode.pdf ./image/BUAA_CollegeCode
 ```
 
 参数说明：

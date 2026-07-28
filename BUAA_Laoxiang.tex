@@ -8,14 +8,17 @@
 \setmainfont{Times New Roman}
 \setCJKmainfont[AutoFakeBold=2.2]{FangSong_GB2312}
 \newCJKfontfamily\titlefont{FZXiaoBiaoSong-B05S}
-
+\setCJKmainfont[
+  AutoFakeBold=2.2,
+  AutoFakeSlant=0.2
+]{FangSong_GB2312}
 
 % 页面与表格设置
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{4pt}
 \setlength{\arrayrulewidth}{0.45pt}
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.1}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 % 链接样式
@@ -103,11 +106,17 @@
 \hline
 宁夏回族自治区 & & & \\
 \hline
-新疆维吾尔自治区 & 微信群 & 可联系 QQ 2230235600 邀请进群 & \\
+新疆维吾尔自治区 & 微信群 & 可联系 QQ 2230235600 邀请进群 & 200人+\\
 \hline
 香港特别行政区 & & & \\
 \hline
 澳门特别行政区 & & & \\
+\hline
+\multicolumn{4}{|r|}{%
+  \zihao{5}\itshape 如若补充或修改，可访问
+  \grouplink{https://github.com/moranfeixiang/BUAATable}
+  或联系 2711702720%
+}\\
 \hline
 \end{tabular}
 }
